@@ -18,23 +18,184 @@
 	<link rel="stylesheet" href="css/style.css">
 	<script src="https://smtpjs.com/v3/smtp.js"></script>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+	<style>
+		 .blurred-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.6); /* Semi-transparent background */
+            backdrop-filter: blur(10px); /* Adjust the blur radius */
+            /* z-index: -1;  */
+			/* Ensure it's above other content */
+        }
+		
+		/* .backgound-blur{
+			background: #ffffff69;
+			box-shadow: 20px;
+			box-shadow: 10px 10px 15px rgb(208 199 199 / 24%);
+			border-radius: 40px;
+		} */
+
+		body{
+			overflow-x: hidden;
+		}
+		.icon{
+			height:77px;
+			width: 100px;
+		}
+
+		.mainpage-image {
+            max-width: 70%;
+            max-height: 70vh; /* Maintain aspect ratio */
+            display: block; /* Remove bottom space */
+			margin-top: 180px;			
+        }
+		.responsive-image{
+			width: 100%; /* Ensures the image doesn't exceed its container */
+			height: 70vh; /* Allows the image to scale proportionally */
+			display: block;
+		}
+		.leftCornerImgRadius{
+			/* border-top-left-radius: 35%; */
+			/* border-bottom-left-radius: 35%; */
+			border-radius: 200px 0px 0px 200px;
+		}
+		.RightCornerImgRadius{
+			border-radius: 0px 200px 200px 0px;
+		}
+		.shadow-image {
+            width: 300px; /* Set the width as needed */
+            height: auto; /* Maintain aspect ratio */
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5); /* Shadow with offset, blur, and color */
+            border-radius: 10px; /* Optional: Rounded corners for the shadow effect */
+        }
+.mb60{
+	margin-bottom: 60px;
+}
+
+/* paralex affect style start  */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.servicesParent {
+    height: 80vh; /* Full viewport height */
+    background-image: url('img/long-sheet.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect */
+    color: #000000;
+    text-align: center;
+	padding: 20px;
+}
+
+.spaceingBetweensections{
+	height: 3vh; /* Full viewport height */
+    background-image: url('img/long-sheet.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect */
+    color: #000000;
+    text-align: center;
+}
+
+.sevicescontent {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.ExprencieParent{
+	height: 72vh; /* Full viewport height */
+    /* background-image: url('img/white-long-sheet.jpg');  */
+	background-color: black;
+    /* background-size: cover;
+    background-position: center;
+    background-attachment: fixed;  */
+    color: #ffffff;
+    text-align: center;
+	padding: 5px 20px 10px 0px;
+	
+}
+.skillsContactParent{
+	 /* position: relative; */
+	 height: 150vh; /* Full viewport height */
+    background-image: url('img/long-sheet.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    color: #000000;
+    text-align: center;
+	padding: 20px;
+}
+
+.aboutussection{
+	padding:20px 0px 20px 20px;
+}
+
+.hlspacing{
+	letter-spacing: 5px;
+	font-size: small;
+	text-transform: uppercase;
+	/* text-decoration: underline; */
+	color: green;
+}
+.mhlspacing{
+	letter-spacing: 5px;
+	font-size: medium;
+	text-transform: uppercase;
+	color: green;
+}
+.mt30{
+	margin-top: 30px;
+}
+
+#myForm input,
+#myForm textarea{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.customebtn{
+	border: 2px solid #fff;
+    padding: 10px 50px;
+    border-radius: 10px;
+	background-color: rgba(0, 0, 0, 0.363);
+	color: white;
+	align-items: start;
+}
+.customebtn:hover{
+	color: #ffffff;
+	background-color: #000000;
+}
+.float-l{
+	float: left;
+}
+
+
+/* .widhei{
+	width: auto;
+	height: 50vh;
+} */
+/* paralex style effect end */
+	</style>
 </head>
 
 <body id="top">
 	<header id="navigation" class="navbar-fixed-top">
-		<div class="container">
+		<div class="navContent" style="z-index: 10;">
 			<div class="navbar-header">
 				<!-- responsive nav button -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 					<span>=</span>
 				</button>
-				<!-- /responsive nav button -->
-
-				<!-- logo -->
-				<h2>
-					Jamal
-				</h2>
-
+				<img src="img/icons/first-removebg-preview.png" class="icon"/>
 				<!-- /logo -->
 			</div>
 			<!-- main nav -->
@@ -46,10 +207,10 @@
 					<li class="fs-3"><a href="#OurServices">
 							<h4>Service</h4>
 						</a></li>
-					<li class="fs-3"><a href="#AboutUs">
+					<li class="fs-3"><a href="#Aboutus">
 							<h4>About Us</h4>
 						</a></li>
-					<li class="fs-3"><a href="#ContactUs">
+					<li class="fs-3"><a href="#contactSec">
 							<h4>Contact</h4>
 						</a></li>
 				</ul>
@@ -61,46 +222,54 @@
 	<!-- video -->
 
 	<!-- end video -->
+	
 	<section id="hero">
-		<div class="hero-container text-center">
-			<div class="text">
-				<h1 id="fline">Self Belief And Hard Work Will Always <br> Earn You Success</h1>
-				<h3 id="sline">Your Success Initial Point Is Here Check It Out</h3></br>
-				<a href="blog.html" id="workbtn" class="btn">MY WORK</a>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="hero-container">
+					<div class="text">
+						<h1>Self Belief And Hard Work Will Always</h1>
+						<h1>Earn You Success</h1>
+						<h3>Your Success Initial Point Is Here Check It Out</h3>
+						<a href="blog.html" id="workbtn" class="btn">MY WORK</a>
+					</div>
+				</div>
 			</div>
-		</div>
+			<div class="col-md-6">
+				<img src="img/colorless-bg-remove.png" class="mainpage-image leftCornerImgRadius"/>
+			</div>
+		</div>        
 	</section>
-
-	<section id="OurServices">
-		<div class="container service"
-			style="box-shadow: 0px 2px 7px 1px grey; border-radius: 20px; margin-bottom: 60px; margin-top: 60px;">
+	<!-- <div class="parallax"></div> -->
+	<section id="OurServices" class="servicesParent">
+		<div class="service sevices">
 			<div class="row">
 				<div class="col-md-12 text-center">
-					<h2>OUR BEST SERVICES</h2>
+					<h2 class="mhlspacing">OUR BEST SERVICES</h2>
 					<p>We are here to boast your business with our experienced skills.</p>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-4 mx-2 services">
+				<div class="col-md-4 mx-2">
 					<i class="fa-brands fa-laravel fa-2x"></i>
-					<h3>Laravel</h3>
+					<h3 class="text-danger">Laravel</h3>
 					<p>Our top Laravel experts can easily build creative and professional looking web and mobile
 						applications.
 						From simple apps to complex CMS for e-commerce websites, Belitsoft Laravel Development Services
 						are
 						ground on building and delivering projects of any size at affordable prices.</p>
 				</div>
-				<div class="col-md-4 services">
+				<div class="col-md-4">
 					<i class="fa-brands fa-react fa-2x"></i>
-					<h3>React js</h3>
+					<h3 class="text-info">React js</h3>
 					<p>React makes it painless to create interactive UIs. Design simple views for each state
 						in your application, and React will efficiently update and render just the right components
 						when your data changes.Declarative views make your code more predictable and easier to debug.
 					</p>
 				</div>
-				<div class="col-md-4 services">
-					<i class="fa-brands fa-wordpress-simple fa-2x"></i>
-					<h3>Responsive Design</h3>
+				<div class="col-md-4">
+					<i class="fa-solid fa-desktop"></i>
+					<h3 class="text-success">Responsive Design</h3>
 					<p>Our Design support for full screen sizes.improves th.e experience for your users and delivers
 						positive business results.
 						We’ve seen an increase in the number of. <i>Websites</i> across all categories taking advantage
@@ -111,105 +280,103 @@
 			</div>
 		</div>
 	</section>
-
-
-	<section id="AboutUs">
-		<div class="container">
-			<div class="panel-group" id="accordion">
-				<h1 class="text-center">About Us</h1>
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h4 class="panel-title">
-							<a data-toggle="collapse" data-parent="#accordion" href="#collapse1"><b>Education</b></a>
-						</h4>
-					</div>
-					<div id="collapse1" class="panel-collapse collapse in">
-						<div class="panel-body">
+	<!-- <div class="parallax"></div> -->
+	<!-- About us start -->
+	<div id="Aboutus" class="aboutussection">
+		<div class="service sevices">
+			<div class="row p-5 widhei">
+				<div class="col-md-12">
+					<h2 class="mhlspacing text-center mb60">About Us</h2>
+					<!-- <hr style="line-height: 1px; margin: 0px 0px 60px 0px; color: green !important;"> -->
+				</div>
+				<div class="col-md-5">
+					<h3 class="hlspacing">Education</h3>
+					<div class="panel-body">
+						<ul>
+						<li>🥇 <b>Schooling: </b> Government High School Lahore</li>
+						<li>🎖️ <b>College:</b> Punjab Group Of Colleges</li>
+						<li>🎓 <b>University:</b> COMSATS University Islamabad</li>
+						<li>📝 <b>Certified : </b>
 							<ul>
-								<li>🥇 Schooling: Government High School Lahore</li>
-								<li>🎖️ College: Punjab Group Of Colleges</li>
-								<li>🎓 University: COMSATS University Islamabad</li>
-								<li>📝 Certified: I Am Certified As A Full Stack Developer From Star Academy</li>
+								<li>Database Management from COMSATS University</li>
+								<li>Web Technologies from COMSATS University</li>
+								<li>Mobile Application Development from COMSATS University</li>
 							</ul>
-						</div>
+						</li>	
+						</ul>
 					</div>
 				</div>
+				<div class="col-md-7 eImg">
+					<img src="img/books.jpg" class="responsive-image leftCornerImgRadius">
+				</div>
+			</div>
+		</div>
+	</div>
 
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h4 class="panel-title">
-							<a data-toggle="collapse" data-parent="#accordion" href="#collapse2"><b>Experience</b></a>
-						</h4>
+	<div class="spaceingBetweensections">
+	</div>
+	<!-- Exprenciec section start -->
+	<div id="experienceSec" class="ExprencieParent">
+		<div class="service sevices">
+			<div class="service sevices">
+				<div class="row p-5">
+					<div class="col-md-7">
+						<img src="img/experience.jpg" class="responsive-image RightCornerImgRadius">
 					</div>
-					<div id="collapse2" class="panel-collapse collapse">
-						<div class="panel-body">🌟Since the year 2018,
-							we have been providing full-cycle PHP web development(planning, designing, building,
-							testing,
-							and maintaining user-friendly web applications) and Laravel web application development
-							(since 2021)
-							for our customers from the 🤝 USA, the UK, Germany and Europe.</div>
-					</div>
-				</div>
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h4 class="panel-title">
-							<a data-toggle="collapse" data-parent="#accordion" href="#collapse3"><b>Uniqueness</b></a>
-						</h4>
-					</div>
-					<div id="collapse3" class="panel-collapse collapse">
+					<div class="col-md-5 text-left">
+						<h6 class="hlspacing">experience</h6>
 						<div class="panel-body">
-							<b>24/7 Online Presence:</b>
-One of the main advantages of having a website is that it provides accessibility to the target audience all the time. Even during non-business hours, customers can visit the website and avail the services. They can simply visit any time to gather any information that they require.
-
-This is one of the key elements of why a business needs a website. It is constantly at work to ensure that customers who come in are always provided an engaging experience at their own convenience.
-
-<br>
-<br>
-<b>24/7 Customer Support:</b>
-
-Providing adequate customer support is a challenging task for any business. But if it is done through an online platform, it can be productive as it is easier and cost-effective.
-
-This is where the importance of having a website becomes clear as customer support through a website can be provided in various ways like FAQs and automated chats.
-
-<br>
-<br>
-<b>Information Exchange:</b>
-
-Customers expect any brand or business to have an online presence that will help them access the services that they are searching for. One of the most attractive aspects of a business website is how seamlessly it can deliver all the required information to the customers.
-
-<br>
-<br>
-<b>Visibility:</b>
-
-Your website can become a representative platform for your business, it can be an online store, office, and showroom at a minimal cost.
-
-As we know, a physical store has got a visibility ratio within a particular area of location. But when it comes to online platforms, the visibility and the reach of the businesses get a wider spectrum. Users from any part of the world can browse your website to get information about what you are delivering.
-
-<br>
-<br>
-<b>Marketing:</b>
-
-Marketing is a crucial aspect when it comes to the expansion of a business. Having a website makes things very easy as they can pass the information to the target groups.
-
-Having a website is beneficial as it would make it appear in Search Engines whenever people search a particular keyword.
-
-There are two types of marketing methods that are commonly used with websites. One is Search Engine Optimization, and the second is Search Engine Marketing.
-
-<br>
-<br>
-<b>Growth Opportunity:</b>
-
-A website acts as the portfolio of a company. This can prove to be beneficial for businesses as the website can act as a reference for potential customers. This enables them to be acquainted what you deliver, what you have achieved so far, and what your plans for the future are as an organization.
+						<b>* Software Engineer</b><small> at </small><a href="https://www.fantechlabs.io/">fanteclab</a> <br><br>
+							● Proficient in Full-Stack Development<br>
+							● Open-Source Contributions<br>
+							● Project Management and Collaboration<br>
+							<br>
+							<b>* Projects I Build Related To:</b><br><br>
+							<li>Informational&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp; E-commerce</li>
+							<li>Blogs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;Portfolio</li>
+							<li>
+							Business&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;Educational</li>
+								
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
+	<div class="spaceingBetweensections">
+	</div>
+<!-- uniquness section -->
+	<div id="uniqSec" class="aboutussection">
+		<div class="service sevices">
+			<div class="row p-5">
+				<div class="col-md-5">
+					<h3 class="hlspacing">uniquness</h3>
+					<div class="panel-body">
+						<ul>
+							<li>24/7 Online Presence</li>
+							<li>24/7 Customer Suppor</li>
+							<li>Seamless Communication</li>
+							<li>Website Visibility at minimum cost</li>
+							<li>Marketing</li>
+							<li>Growth Opportunity</li>
+							<li>Customized websites to fit your requirements</li>
+							<li>Mobile-friendly designs</li>
+							<li>Swift resolution of any tech-related issues</li>
+							<li>Timely project delivery</li>
+							<li>Reasonable rates</li>	
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-7 eImg">
+					<img src="img/unique.jpg" class="responsive-image leftCornerImgRadius">
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- My skills -->
-	<div class="container">
-		<div class="row skills">
-			<h1 class="text-center">My Skills</h1>
+	<div class="skillsContactParent">
+		<div class="row">
+			<h1 class="text-center mhlspacing mb60">Skills</h1>
 			<div class="col-md-6">
 				<div class="row">
 					<div class="col-md-3">
@@ -218,7 +385,7 @@ A website acts as the portfolio of a company. This can prove to be beneficial fo
 					<div class="col-md-9">
 						<div class="progress">
 							<div class="progress-bar progress-bar-striped progress-bar-animated " role="progressbar"
-								aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
+								aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
 						</div>
 					</div>
 				</div>
@@ -266,13 +433,10 @@ A website acts as the portfolio of a company. This can prove to be beneficial fo
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- my skills -->
-
-	<section id="ContactUs">
-		<div class="container">
-			<div class="row" style="box-shadow: 0px 2px 7px 1px grey; border-radius: 20px; padding: 60px;">
-				<h1 class="text-center" style="margin-top: -25px;">Contact Us</h1>
+		<!-- contact us section start -->
+		<div id="contactSec" class="contactussection mt30">
+			<div class="row">
+				<h1 class="text-center mhlspacing mb60">Contact Us</h1>
 				<div class="col-md-8" id="contect-form">
 
 					<form method="post" class='form' id="myForm" action="" enctype="">
@@ -292,7 +456,7 @@ A website acts as the portfolio of a company. This can prove to be beneficial fo
 							<textarea cols="63" rows="5" name="msg" value="msg" id="Message" required class="msg form-control"
 								placeholder="Enter Your Message Here..."></textarea>
 						</div>
-						<button type="button" class="Send Email" onclick="sendmail()">Submit</button>
+						<button type="button" class="Send Email customebtn float-l" onclick="sendmail()">Submit</button>
 
 					</form>
 					<ul class="social">
@@ -313,7 +477,7 @@ A website acts as the portfolio of a company. This can prove to be beneficial fo
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h4 class="text-center">All right reserved 2022</h4>
+					<h4 class="text-center">All Rights reserved 2022</h4>
 				</div>
 			</div>
 		</div>
