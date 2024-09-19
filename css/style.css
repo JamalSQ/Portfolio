@@ -395,16 +395,20 @@ textarea{
     z-index: 10;
     text-align: left;
     left: 15px;
-    top: 286px;
+    top: 300px;
   }
   .mainpage-image{
     display: none !important;
   }
   .text h1{
-    font-size: 18px !important;
+    font-size: 14px !important;
+    margin-top: 10px !important;
+    padding:0px 20px 0px 0px !important;
   }
   .text h3{
-    font-size: 14px !important;
+    font-size: 13px !important;
+    padding:0px 20px 0px 0px !important;
+
   }
 
   .text a {
@@ -421,6 +425,7 @@ textarea{
   }
   .btn{
     padding: 10px 23px !important;
+    margin-top: 40px !important;
   }
 
   .servicesParent {
@@ -429,6 +434,7 @@ textarea{
   }
   
   .ExprencieParent{
+    height: 100% !important;
     padding: 5px 0px 10px 20px !important;
   }
   #experienceSec  img {
@@ -501,6 +507,7 @@ textarea{
     padding: 10px; /* Adjust padding for smaller screens */
 }
   .ExprencieParent{
+    height: 100%;
     padding: 5px 0px 10px 20px !important;
   }
 
@@ -517,8 +524,23 @@ textarea{
   .aboutussection {
     padding: 0px 0px 0px 20px !important;
   }
-
-.projects,.skill,.contect {
+  .navbar-header {
+    height: 40px !important;
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: space-between; /* Optional: adjust space between elements */
+}
+.navbar-toggle {
+  border-color: #fff !important;
+}
+.navbar-toggle {
+  padding: 0px 9px !important;
+}
+.icon {
+    max-width: 50px; /* Set a max width for the icon */
+    height: auto; /* Maintain aspect ratio */
+}
+.projects,.skill,.contect ,.contect-div{
     display: flex;
     flex-wrap: wrap;
 } 
@@ -531,7 +553,7 @@ textarea{
   max-width: 100%; /* Ensure columns do not exceed 50% width */
 }
 
-.skill .col-md-6 {
+.skill .col-md-6 , .social{
   flex: 0 0 50%; /* Make each column take up 50% of the row width */
   max-width: 50%; /* Ensure columns do not exceed 50% width */
 }
@@ -556,7 +578,12 @@ textarea{
   .text h3{
     font-size: 14px;
   }
-
+  .navbar-toggle {
+    border-color: #fff !important;
+  }
+  .navbar-toggle {
+    padding: 0px 9px !important;
+  }
   .text a {
     display: inline-block;
     font-size: 12px;
