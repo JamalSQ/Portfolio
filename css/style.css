@@ -27,8 +27,9 @@
   }
 }
 
-
 body {
+  padding: 0px;
+  margin: 0px;
   font-size: 20px;
   color:var(--text-color) !important;
   background-color: var(--background-color);
@@ -164,18 +165,6 @@ body {
   background-image: url('img/newbanner/jpg');
 }
 
-
-/* Our services end */
-
-
-
-
-
-
-
-
-/* video end */
-
 header {
   padding: 10px 0px;
   /* background-color: var(--background-color); */
@@ -202,7 +191,6 @@ header .navbar {
   background-color: rgba(238, 238, 238, 0.459); /* Semi-transparent background color */
   border-radius: 50px; /* Rounded corners */
   margin: 10px 100px; /* Margin with top/bottom and left/right values */
-  z-index: 1;
   box-shadow: 0px 0px 1px rgb(0, 0, 0,.2);
 }
 
@@ -400,170 +388,285 @@ textarea{
   padding: 10px 0px 10px 10px;
 }
 
-
-/* =====================
-   desktop
-   min-width: 768px;
-   max-width: 1024px;
-
-===================== */
-
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  #banner{
-    margin-top: 30px;
+/* // X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+  .text {
+    position: relative;
+    z-index: 10;
+    text-align: left;
+    left: 15px;
+    top: 286px;
   }
-  #latest-work .block .recent-work-pic ul li .overlay {
-    top: 12px;
-    left: 25px;
-    bottom: 12px;
-    right: 25px;
+  .mainpage-image{
+    display: none !important;
   }
-  #team .team-overlay {
-    padding: 10px;
+  .text h1{
+    font-size: 18px !important;
   }
-  #contect-form{
-    margin-bottom: 20px;
-
-  }
-}
-
-
-
-/* =====================
-
-   Tablets
-   min-width: 640px;
-   max-width: 767px;
-
-===================== */
-
-@media (min-width: 640px) and (max-width: 767px) {
-  #banner{
-    margin-top: 30px;
-  }
-  #team .col {
-    padding: 0 137px;
-    margin-bottom: 20px;
-  }
-  #pricing-table .col {
-    margin-bottom: 20px;
-  }
-  #contact-form .col {
-    margin-bottom: 20px;
+  .text h3{
+    font-size: 14px !important;
   }
 
-  #blog-left .blog-img .col-md-6 img{
-    margin-bottom: 20px;
+  .text a {
+    display: inline-block;
+    font-size: 12px;
+    background: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 60px;
+    color: #111;
+    letter-spacing: 2px;
+    transition: 0.2s;
   }
-  #contect-form{
-    margin-bottom: 20px;
+  .btn{
+    padding: 10px 23px !important;
+  }
+
+  .servicesParent {
+      min-height: 50vh; /* Adjust height for smaller screens if needed */
+      padding: 10px; /* Adjust padding for smaller screens */
   }
   
-  .menu a:hover:before {
-    width: 10%;
+  .ExprencieParent{
+    padding: 5px 0px 10px 20px !important;
   }
-  
+  #experienceSec  img {
+      display: none !important;
+  }
+ .uniqnessSec img{
+    display: none !important;
+  }
+  .educationsec img{
+    display: none !important;
+  }
+
+  .contect{
+    margin-right: 5px;
+  }
+
+  .projects,.contect,.skill {
+    display: flex;
+    flex-wrap: wrap;
+}
+.contect .contect-div{
+  flex: 0 0 100% !important; /* Make each column take up 50% of the row width */
+  max-width: 100% !important; /* Ensure columns do not exceed 50% width */
+}
+.projects .col-sm-6 {
+    flex: 0 0 50% !important; /* Make each column take up 50% of the row width */
+    max-width: 50% !important; /* Ensure columns do not exceed 50% width */
+}
+.skill .col-md-6 {
+  flex: 0 0 100% !important; /* Make each column take up 50% of the row width */
+  max-width: 100% !important; /* Ensure columns do not exceed 50% width */
 }
 
+}
 
-
-/* =====================
-
-   Small Devices
-   min-width: 320px;
-   max-width: 479px;
-
-===================== */
-
-
-@media (min-width: 320px) and (max-width: 479px) {
-  #banner {
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 768px) {
+  .text {
+    position: relative;
+    z-index: 10;
     text-align: center;
-    margin-top: 30px;
+    left: 15px;
+    top: 286px;
   }
-  #banner .block .buttons a:first-child {
-    margin-left: 7px;
-    margin-bottom: 10px;
+  .mainpage-image{
+    display: none !important;
   }
-  #latest-work .block .recent-work-mixMenu ul li {
-    display: block;
+  .text h1{
+    font-size: 26px;
   }
-  #latest-work .block .recent-work-pic ul li .overlay {
-    top: 5px;
-    left: 20px;
-    bottom: 5px;
-    right: 20px;
-  }
-  #latest-work .block .recent-work-pic ul li .overlay h3 {
+  .text h3{
     font-size: 14px;
   }
-  #latest-work .block .recent-work-pic ul li .overlay i {
-    top: 34%;
-    font-size: 23px;
+
+  .text a {
+    display: inline-block;
+    font-size: 12px;
+    background: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 60px;
+    color: #111;
+    letter-spacing: 2px;
+    transition: 0.2s;
   }
-  #testimonial .col {
-    padding: 20px;
+
+  .servicesParent {
+    min-height: 60vh; /* Adjust height for smaller screens if needed */
+    padding: 10px; /* Adjust padding for smaller screens */
+}
+  .ExprencieParent{
+    padding: 5px 0px 10px 20px !important;
+  }
+
+  #experienceSec  img {
+      display: none !important;
+  }
+ .uniqnessSec img{
+    display: none !important;
+  }
+  .educationsec img{
+    display: none !important;
+  }
+
+  .aboutussection {
+    padding: 0px 0px 0px 20px !important;
+  }
+
+.projects,.skill,.contect {
+    display: flex;
+    flex-wrap: wrap;
+} 
+.projects .col-sm-6 {
+    flex: 0 0 50%; /* Make each column take up 50% of the row width */
+    max-width: 50%; /* Ensure columns do not exceed 50% width */
+}
+.contect .contect-div{
+  flex: 0 0 100%; /* Make each column take up 50% of the row width */
+  max-width: 100%; /* Ensure columns do not exceed 50% width */
+}
+
+.skill .col-md-6 {
+  flex: 0 0 50%; /* Make each column take up 50% of the row width */
+  max-width: 50%; /* Ensure columns do not exceed 50% width */
+}
+
+ }
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+  .text {
+    position: relative;
+    z-index: 10;
     text-align: center;
+    left: 15px;
+    top: 286px;
   }
-  #testimonial .media .media-left {
-    display: block;
-    padding-right: 0;
+  .mainpage-image{
+    display: none !important;
   }
-  #testimonial .media .media-left a {
-    height: 78px;
-    width: 78px;
-    margin: 0 auto;
+  .text h1{
+    font-size: 26px;
   }
-  #testimonial .media .media-body {
-    padding-right: 0;
-  }
-  #team .col {
-    margin-bottom: 20px;
-  }
-  #pricing-table .col {
-    margin-bottom: 20px;
-  }
-  #contact-form .col {
-    margin-bottom: 20px;
+  .text h3{
+    font-size: 14px;
   }
 
-  #blog-left .block .blog-comment .comment-img,
-  #blog-left .blog-comment-main .blog-comment .comment-img,
-  #blog-left .blog-comment-main .sub-blog-comment .comment-img{
-    float: none;
+  .text a {
+    display: inline-block;
+    font-size: 12px;
+    background: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 60px;
+    color: #111;
+    letter-spacing: 2px;
+    transition: 0.2s;
   }
 
-  #blog-left .blog-comment-main .sub-blog-comment{
-    margin-left: 0;
+  .servicesParent {
+    min-height: 70vh; /* Adjust height for smaller screens if needed */
+    padding: 10px; /* Adjust padding for smaller screens */
+}
+  .ExprencieParent{
+    padding: 5px 0px 10px 20px !important;
+    background-color: #333 !important;
+
   }
 
-  #blog-left .blog-img .col-md-6 img{
-    margin-bottom: 20px;
+  #experienceSec  img {
+      display: none !important;
   }
-  #contect-form{
-    margin-bottom: 20px;
+ .uniqnessSec img{
+    display: none !important;
   }
-  .showcase,
-  .showcase header
-  {
-    padding: 40px;
-    max-width: auto;
+  .educationsec img{
+    display: none !important;
   }
-  .text h2
-  {
-    font-size: 10px;
+
+  .aboutussection {
+    padding: 0px 0px 0px 20px !important;
   }
-  .text h3
-  {
-    font-size: 10px;
+
+.projects,.skill,.contect {
+    display: flex;
+    flex-wrap: wrap;
+} 
+.projects .col-sm-6 {
+    flex: 0 0 33.333%; /* Make each column take up 50% of the row width */
+    max-width: 33.333%; /* Ensure columns do not exceed 50% width */
+}
+.contect .contect-div{
+  flex: 0 0 50%; /* Make each column take up 50% of the row width */
+  max-width: 50%; /* Ensure columns do not exceed 50% width */
+}
+.skill .col-md-6 {
+  flex: 0 0 50%; /* Make each column take up 50% of the row width */
+  max-width: 50%; /* Ensure columns do not exceed 50% width */
+}
+
+ }
+
+/* // Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) { 
+ 
+  .mainpage-image {
+    margin-top: 150px !important;
   }
-  .menu a:hover:before {
-    width: 10% !important;
+  .servicesParent {
+    min-height: 80vh; /* Adjust height for smaller screens if needed */
+    padding: 10px; /* Adjust padding for smaller screens */
+}
+  .ExprencieParent{
+    padding: 5px 0px 10px 20px !important;
+    background-color: #333 !important;
   }
-  
+  .aboutussection {
+    padding: 0px 0px 0px 20px !important;
+  }
+
+.projects,.skill,.contect {
+    display: flex;
+    flex-wrap: wrap;
+} 
+.projects .col-sm-6 {
+    flex: 0 0 33.333%; /* Make each column take up 50% of the row width */
+    max-width: 33.333%; /* Ensure columns do not exceed 50% width */
+}
+.contect .contect-div{
+  flex: 0 0 50%; /* Make each column take up 50% of the row width */
+  max-width: 50%; /* Ensure columns do not exceed 50% width */
+}
+.skill .col-md-6 {
+  flex: 0 0 50%; /* Make each column take up 50% of the row width */
+  max-width: 50%; /* Ensure columns do not exceed 50% width */
+}
 
 }
 
+/* // X-Large devices (large desktops, less than 1400px) */
+@media (min-width: 1199.98px) and (max-width: 1399.98px) { 
+  .mainpage-image {
+    margin-top: 150px !important;
+  }
 
+  .text a {
+    display: inline-block;
+    background: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 60px;
+    color: #111;
+    letter-spacing: 2px;
+    transition: 0.2s;
+  }
+
+ }
 
